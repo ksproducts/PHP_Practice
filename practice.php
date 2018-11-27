@@ -43,12 +43,16 @@ function createCombination($n, $r)
 
 $start = microtime(true);
 $ret = createCombination(6,3);
+
+$replace_from = array(0, 1, 2, 3, 4, 5);
 $replace_to = array("A","B","C","D","E","F");
+
 printf("%f sec.\n", microtime(true) - $start);
 printf("%d row.\n", count($ret));
 sort($ret);
 foreach ($ret as $value) {
 	echo '[', implode(',', $value), ']', "\n";
+	print_r(str_replace($replace_from, $replace_to, $value));
 }
 
 ?>
