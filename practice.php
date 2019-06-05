@@ -56,3 +56,25 @@ foreach ($ret as $value) {
 }
 
 ?>
+<?
+
+function myFact($fact)
+{
+    $f = 1;
+    while($fact >= 1) {
+        $f = $f * $fact;
+        $fact--;
+    }
+    return $f;
+}
+
+$n = 6;
+$r = 3;
+
+echo myFact($n).PHP_EOL;
+echo myFact($r).PHP_EOL;
+
+echo myFact($n) / myFact($r) / $r;
+echo PHP_EOL;
+
+?>
